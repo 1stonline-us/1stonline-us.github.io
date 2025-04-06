@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1stOnline.us - Being First Matters!</title>
+    <style>
+        :root {
+            --primary: #2b5797;
+            --secondary: #4285f4;
+            --accent: #ff9800;
+            --light: #f5f5f5;
+            --dark: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-cta {
+            background-color: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-cta:hover {
+            background-color: #e68a00;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            height: 4px;
+            width: 100px;
+            background-color: var(--accent);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .expertise-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .expertise-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .card-title {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .projects {
+            background-color: #f0f4f8;
+        }
+        
+        .project-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .project-title {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-metric {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .about-image img {
+            width: 100%;
+            display: block;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .skill-tag {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        @media (max-width: 768px) {
+            .about {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-content {
+                order: 1;
+            }
+            
+            .about-image {
+                order: 2;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">1st<span style="color: var(--accent);">Online</span>.us</div>
+            <div class="tagline">Being First Matters!</div>
+            <a href="https://trustedadvisor.digital/contact-us/" class="hero-cta">Get Started</a>
+        </div>
+    </header>
+    
+    <section class="expertise">
+        <div class="container">
+            <h2 class="section-title">Digital Leadership Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="card-icon"><i class="fas fa-cloud"></i></div>
+                    <h3 class="card-title">Cloud Solutions Architecture</h3>
+                    <p>Transformative cloud strategies that empower businesses to scale effectively and securely. Expert implementation of cloud architectures tailored to your unique needs.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="card-icon"><i class="fas fa-robot"></i></div>
+                    <h3 class="card-title">Artificial Intelligence</h3>
+                    <p>Leverage the power of AI to gain competitive advantages. From predictive analytics to intelligent automation, unlock new potential for your business.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="card-title">Digital Marketing Strategy</h3>
+                    <p>Data-driven marketing approaches that deliver measurable results. Comprehensive strategies that position your brand at the forefront of your industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   
+    <section>
+        <div class="container about">
+            <div class="about-image">
+                <img src="https://trustedadvisor.digital/wp-content/uploads/2024/03/azure-solutions-architect-expert-600x600-1.png" alt="Michael Stuart - Cloud Solutions Architect">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title" style="text-align: left;">About Michael Stuart</h2>
+                <p>Michael Stuart is a distinguished Cloud Solutions Architect and Digital Strategist with over 25 years of experience in technology leadership. As the founder and former CEO of AssetWorks, Michael has a proven track record of delivering innovative solutions that drive exceptional business outcomes.</p>
+                <p>Having served clients ranging from startups to Fortune 500 companies, Michael's expertise spans cloud computing, artificial intelligence, digital transformation, and enterprise software development.</p>
+                <div class="skills">
+                    <div class="skill-tag">Cloud Architecture</div>
+                    <div class="skill-tag">Digital Strategy</div>
+                    <div class="skill-tag">AI Implementation</div>
+                    <div class="skill-tag">Software Development</div>
+                    <div class="skill-tag">Enterprise Solutions</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="achievements" style="background-color: var(--primary); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Delivering Exceptional Outcomes</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div>
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--accent);">250,000+</div>
+                    <div>Customers Served</div>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--accent);">$20B+</div>
+                    <div>In Sales Generated</div>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--accent);">20+</div>
+                    <div>Years of Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   
+    <footer>
+        <div class="container">
+            <div class="logo" style="font-size: 2rem;">1st<span style="color: var(--accent);">Online</span>.us</div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/michaelalanstuart/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="copyright">
+                &copy;1stOnline.us. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
